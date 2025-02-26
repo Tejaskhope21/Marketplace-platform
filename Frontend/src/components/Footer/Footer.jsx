@@ -7,7 +7,7 @@ function Footer() {
       
       <div className='footer__logo'>
         <img src="/logo.png" alt="Logo" width="50" height="50" />
-        <p>Khole Munafe Ka Shutter</p>
+        <p>MarketSetu</p>
         <div>
           <img src="/apple.png" alt="App Store" width="30" height="30" />
           <img src="/playstore.png" alt="Google Play" width="30" height="30" />
