@@ -13,12 +13,8 @@
     "@fortawesome/fontawesome-free": "^6.7.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-<<<<<<< HEAD
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.2.0"
-=======
-    "react-router": "^7.2.0"
->>>>>>> 7c64c060c330798dd14beebe0e367ef6f4fe4a9c
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
