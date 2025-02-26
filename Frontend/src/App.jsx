@@ -1,7 +1,12 @@
 import React from "react";
+import Footer from "./components/Footer/Footer";
+import Navebar from "./components/Navebar/Navebar";
 
 const App = () => {
-  return <div>App</div>;
+  return <>
+  <Navebar/>
+  <Footer/>
+  </>;
 };
 
 export default App;
