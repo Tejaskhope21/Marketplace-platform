@@ -12,22 +12,24 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 24px;
-    background-color: white;
+    background: #ff6600;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1000;
+    border-bottom: rgba(0, 0, 0, 0.567) 1px solid;
+    
 }
 
 .link {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 /* Logo */
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -41,7 +43,7 @@
 
 .nav-links a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 16px;
     font-weight: 600;
     transition: color 0.3s ease-in-out;
@@ -56,7 +58,7 @@
     display: none;
     font-size: 28px;
     cursor: pointer;
-    color: black;
+    color: white;
 }
 
 /* Responsive Design */
@@ -64,6 +66,7 @@
     .menu-toggle {
         display: block;
         transition: transform 0.3s ease-in-out;
+        
     }
 
     .nav-links {
@@ -115,4 +118,6 @@
     .menu-toggle {
         font-size: 26px;
     }
+}.nav-links.show{
+    background: #ff6600;
 }
