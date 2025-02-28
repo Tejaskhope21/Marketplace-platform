@@ -21,12 +21,8 @@
     z-index: 1000;
 }
 
-/* Ensure navbar stays full width even on scroll */
-/* .navbar.scrolled {
-    background: white;
-    backdrop-filter: blur(10px);
-    width: 100vw;
-} */
+
+
 
 /* Logo */
 .logo {
@@ -39,9 +35,7 @@
     color: #ff6600;
 }
 
-/* .navbar.scrolled .link {
-    color: black;
-} */
+
 
 
 /* Navigation Links */
@@ -59,7 +53,9 @@
     font-weight: 600;
     transition: color 0.3s ease-in-out;
 }
-
+.nav-links a {
+    transform: scale(1.1);
+}
 /* Navbar Scrolled Styles */
 /* .navbar.scrolled .nav-links a {
     color: black;
@@ -74,14 +70,23 @@
     display: none;
     font-size: 28px;
     cursor: pointer;
-    color: white;
+    color: #ff6600;
+}
+.link .sign{
+    border: #ff6600 solid 2px;
+    border-radius: 9px;
+    padding: 5px 10px  5px 10px;
+}
+.link .sign:hover {
+    transform: scale(1.1); /* Increases size on hover */
+   
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 1s ease-in-out;
     }
 
     .nav-links {
@@ -137,6 +142,6 @@
 
 /* Ensure navbar menu is full width when shown */
 .nav-links.show {
-    background: #ff6600;
+    background: white;
     width: 100vw;
 }
