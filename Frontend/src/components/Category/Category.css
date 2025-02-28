@@ -19,6 +19,7 @@ h1 {
 
 .category-card {
     background: white;
+    color: black;
     border-radius: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 50px;

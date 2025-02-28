@@ -12,18 +12,20 @@ const Navbar = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // Close menu when a link is clicked (only in mobile view)
+  const handleLinkClick = () => {
+    if (window.innerWidth <= 768) {
+      setMenuOpen(false);
+    }
+  };
+
   // Change background on scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -43,20 +45,17 @@ const Navbar = () => {
       </div>
 
       {/* Navigation Links */}
-      <div
-        className={`nav-links ${menuOpen ? "show" : ""}`}
-        onClick={toggleMenu}
-      >
-        <Link className="link" to="/signin">
+      <div className={`nav-links ${menuOpen ? "show" : ""}`}>
+        <Link className="link" to="/signin" onClick={handleLinkClick}>
           Sign in
         </Link>
-        <Link className="link" to="/seller">
+        <Link className="link" to="/seller" onClick={handleLinkClick}>
           Seller
         </Link>
-        <Link className="link" to="/bulkproducts">
+        <Link className="link" to="/bulkproducts" onClick={handleLinkClick}>
           Bulk products
         </Link>
-        <Link className="link" to="/shopping">
+        <Link className="link" to="/shopping" onClick={handleLinkClick}>
           Shopping
         </Link>
       </div>
