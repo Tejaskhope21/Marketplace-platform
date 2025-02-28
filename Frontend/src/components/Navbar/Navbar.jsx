@@ -46,8 +46,8 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <div className={`nav-links ${menuOpen ? "show" : ""}`}>
-        <Link className="link" to="/signin" onClick={handleLinkClick}>
-          Sign in
+        <Link className="link"  to="/signin" onClick={handleLinkClick}>
+         <div className="sign"> Sign in</div>
         </Link>
         <Link className="link" to="/seller" onClick={handleLinkClick}>
           Seller
