@@ -11,18 +11,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 24px;
+    padding: 25px 55px;
+    width: 100vw; /* Ensure full viewport width */
     background: #ff6600;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
+    /* box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); */
+    position: fixed; /* Fix it at the top */
+    top: 0;
+    left: 0; /* Ensure it starts from the very left */
     z-index: 1000;
-    border-bottom: rgba(0, 0, 0, 0.567) 1px solid;
-    
 }
 
-.link {
-    text-decoration: none;
-    color: white;
+/* Ensure navbar stays full width even on scroll */
+.navbar.scrolled {
+    background: white;
+    backdrop-filter: blur(10px);
+    width: 100vw;
 }
 
 /* Logo */
@@ -32,6 +35,14 @@
     color: white;
     text-decoration: none;
 }
+.link {
+    color: white;
+}
+
+.navbar.scrolled .link {
+    color: black;
+}
+
 
 /* Navigation Links */
 .nav-links {
@@ -49,8 +60,13 @@
     transition: color 0.3s ease-in-out;
 }
 
-.nav-links a:hover {
-    color: darkolivegreen;
+/* Navbar Scrolled Styles */
+.navbar.scrolled .nav-links a {
+    color: black;
+}
+
+.navbar.scrolled .logo {
+    color: black;
 }
 
 /* Mobile Menu Button */
@@ -66,29 +82,28 @@
     .menu-toggle {
         display: block;
         transition: transform 0.3s ease-in-out;
-        
     }
 
     .nav-links {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 100%;
         left: 0;
-        width: 100%;
+        width: 100vw;
         background: white;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         padding: 10px 0;
         transform: translateY(-100%);
         opacity: 0;
-        pointer-events: none; /* Prevents clicks when hidden */
+        pointer-events: none;
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
 
     .nav-links.show {
         transform: translateY(0);
         opacity: 1;
-        pointer-events: all; /* Enables clicks when visible */
+        pointer-events: all;
     }
 
     .nav-links a {
@@ -118,6 +133,10 @@
     .menu-toggle {
         font-size: 26px;
     }
-}.nav-links.show{
+}
+
+/* Ensure navbar menu is full width when shown */
+.nav-links.show {
     background: #ff6600;
+    width: 100vw;
 }

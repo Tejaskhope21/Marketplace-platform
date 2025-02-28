@@ -1,12 +1,16 @@
+
 import React from 'react'
 import Hero from '../../components/Hero/Hero'
-import Business from '../../components/Business/Business';
+import Category from '../../components/Category/Category'
+import Footer from '../../components/Footer/Footer'
 
 function Home() {
   return (
     <div>
-      <Hero/>
-      <Business/>
+
+      <Hero />
+      <Category />
+      <Footer/>
     </div>
   );
 }
