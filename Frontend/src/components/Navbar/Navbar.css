@@ -12,11 +12,20 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 24px;
-    background-color: white;
+    background-color: #D1CFDC;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
     z-index: 1000;
 }
+
+.navbar.scrolled {
+    background: white;
+    /* Change this color as needed */
+    backdrop-filter: blur(10px);
+}
+
 
 .link {
     text-decoration: none;
@@ -78,14 +87,16 @@
         padding: 10px 0;
         transform: translateY(-100%);
         opacity: 0;
-        pointer-events: none; /* Prevents clicks when hidden */
+        pointer-events: none;
+        /* Prevents clicks when hidden */
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
 
     .nav-links.show {
         transform: translateY(0);
         opacity: 1;
-        pointer-events: all; /* Enables clicks when visible */
+        pointer-events: all;
+        /* Enables clicks when visible */
     }
 
     .nav-links a {
