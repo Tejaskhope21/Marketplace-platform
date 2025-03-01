@@ -15,6 +15,7 @@ const App = () => {
     <>
       {showLogin ? <Login setShowLogin={setShowLogin} /> : null}
       <Navbar setShowLogin={setShowLogin} />
+      <Home/>
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shopping" element={<Shopping />} />
