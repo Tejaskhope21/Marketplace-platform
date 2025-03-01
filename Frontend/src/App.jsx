@@ -13,14 +13,15 @@ const App = () => {
 
   return (
     <>
-      {showLogin ? <Login setShowLogin={setShowLogin} /> : null}
       <Navbar setShowLogin={setShowLogin} />
-      <Home/>
-      {/* <Routes>
+      {showLogin && <Login setShowLogin={setShowLogin} />}
+
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shopping" element={<Shopping />} />
         <Route path="/bulkproducts" element={<Bulkproduct />} />
-      </Routes> */}
+      </Routes>
+
       <Footer />
     </>
   );

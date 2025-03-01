@@ -40,7 +40,7 @@ const Category = () => {
           unbeatable prices!
         </h1>
         <div className="category-grid">
-          <Link className="link" to="/consumer-electronics">
+          <Link className="link" to="/bulkproducts">
             <div className="category-card">
               <span className="icon">
                 <i className="fa-solid fa-headphones"></i>
