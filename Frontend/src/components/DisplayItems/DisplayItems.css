@@ -1,0 +1,64 @@
+/* DisplayItems.css or App.css */
+
+.display-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.item-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.item-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.item-card h2 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.item-card p {
+  font-size: 0.9em;
+  color: #666;
+  margin: 5px 0;
+}
+
+.item-card .price {
+  font-size: 1.1em;
+  color: #000;
+  font-weight: bold;
+}
+
+.item-card .discount {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.item-card .rating {
+  color: #f1c40f;
+  font-weight: bold;
+}
+
+.item-card .reviews {
+  color: #3498db;
+  font-weight: bold;
+}
