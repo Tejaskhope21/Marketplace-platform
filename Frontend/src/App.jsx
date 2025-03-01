@@ -11,11 +11,12 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Routes>
+      <Bulkproduct />
+      {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shopping" element={<Shopping />} />
         <Route path="/bulkproducts" element={<Bulkproduct />} />
-      </Routes>
+      </Routes> */}
       <Footer />
     </>
   );
