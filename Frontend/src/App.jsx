@@ -9,17 +9,17 @@ import "./App.css";
 import Login from "./components/Login/Login";
 
 const App = () => {
-  const [showLogin, setShowLogin] = useState(false); // Correctly placed inside the component
+  const [showLogin, setShowLogin] = useState(false);
 
   return (
     <>
       {showLogin ? <Login setShowLogin={setShowLogin} /> : null}
-      <Navbar setShowLogin={setShowLogin} /> {/* Correct prop name */}
-      <Routes>
+      <Navbar setShowLogin={setShowLogin} />
+      {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shopping" element={<Shopping />} />
         <Route path="/bulkproducts" element={<Bulkproduct />} />
-      </Routes>
+      </Routes> */}
       <Footer />
     </>
   );
