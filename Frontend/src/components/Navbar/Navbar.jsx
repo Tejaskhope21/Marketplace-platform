@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ setShowLogin }) => { // Correct prop name
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -46,9 +46,6 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <div className={`nav-links ${menuOpen ? "show" : ""}`}>
-        <Link className="link"  to="/signin" onClick={handleLinkClick}>
-         <div className="sign"> Sign in</div>
-        </Link>
         <Link className="link" to="/seller" onClick={handleLinkClick}>
           Seller
         </Link>
@@ -58,6 +55,11 @@ const Navbar = () => {
         <Link className="link" to="/shopping" onClick={handleLinkClick}>
           Shopping
         </Link>
+        <div className="link" to="/signin">
+          <button className="sign" onClick={() => setShowLogin(true)}>
+            Sign in
+          </button>
+        </div>
       </div>
     </nav>
   );
