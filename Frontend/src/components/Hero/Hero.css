@@ -2,12 +2,11 @@
   width: 100vw;
   height: 90vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Align content to the left */
   align-items: center;
   position: relative;
   overflow: hidden;
 }
-
 
 /* Ensuring the image covers the entire screen */
 .hero img {
@@ -21,29 +20,29 @@
   left: 0;
 }
 
-
 /* Hero Container Styling */
 .hero-container {
-
   position: relative;
   z-index: 2;
   padding: 20px;
   border-radius: 10px;
-  text-align: center;
+  text-align: left; /* Align text to the left */
   color: black;
   width: 90%;
   max-width: 600px;
-  
+  margin-left: 5%; /* Add some margin from the left */
 }
-.hero-container p{
+
+.hero-container p {
   font-size: 2.2rem;
   font-weight: 500;
+  margin-bottom: 20px; /* Add spacing below the heading */
 }
 
 /* Search Input and Button */
 .hero-serch {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Align search bar to the left */
   align-items: center;
   gap: 10px;
   margin-top: 10px;
@@ -61,7 +60,6 @@
 .hero-serch button {
   padding: 10px 15px;
   border: none;
-  justify-content: flex-start; /* Aligns the search bar to the left */
   background: #ff6600;
   color: white;
   font-size: 1rem;
