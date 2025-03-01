@@ -13,20 +13,15 @@ const App = () => {
 
   return (
     <>
-<<<<<<< HEAD
-      <Navbar />
-      <Home />
-      <Routes>
-=======
-      {showLogin ? <Login setShowLogin={setShowLogin} /> : null}
       <Navbar setShowLogin={setShowLogin} />
-      <Home/>
-      {/* <Routes>
->>>>>>> 023f694be9fff89ec5037d8e88069892f9f2ef10
+      {showLogin && <Login setShowLogin={setShowLogin} />}
+
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shopping" element={<Shopping />} />
         <Route path="/bulkproducts" element={<Bulkproduct />} />
       </Routes>
+
       <Footer />
     </>
   );
