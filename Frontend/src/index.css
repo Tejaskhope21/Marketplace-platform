@@ -9,3 +9,7 @@
 body{
   height: 100vh;
 }
+.app{
+  width: 80%;
+  margin: auto;
+}
